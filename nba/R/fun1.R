@@ -10,6 +10,7 @@
 fun1 <- function(year){
   d1 <- d %>%
     filter(Year == year)
-  output <- max(d1$PTS)
+  output <- d1 %>%
+    filter(PTS == max(d1$PTS))
   output
 }
